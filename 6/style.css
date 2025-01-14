@@ -1,0 +1,59 @@
+  body {
+      background-image: url('media/bg.png');
+      background-size: 200px 200px;
+      background-repeat: cover;
+      font-family: 'Bangers', sans-serif;
+      font-size: 32px;
+      margin: 0;
+  }
+
+  .gameboy {
+      padding: 80px;
+  }
+
+  .gameboyImg {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+      position: relative;
+      animation: upDown 2s ease-in-out infinite alternate;
+    }
+    
+    @keyframes upDown {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(20px); 
+      }
+    }
+    
+    .contents{
+        margin: auto;
+        width: 90%;
+        max-width: 1300px;
+        min-width: 300px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255);
+        box-sizing: border-box;
+        border-radius: 20px;
+    }
+
+
+.centerAdaptiveImg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  
+
+  .floatright{
+    float: right;
+    padding: 10px
+  }
+  
+  p1{
+    font-size: 50px
+  }
