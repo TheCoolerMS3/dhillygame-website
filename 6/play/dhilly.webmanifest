@@ -22,7 +22,7 @@
 ],
     "start_url": "/6/play/index.html",
     "scope": "/6/play/",
-    "display": "browser",
+    "display": "standalone",
     "theme_color": "#aebfcf",
     "background_color": "#aebfcf"
   }
