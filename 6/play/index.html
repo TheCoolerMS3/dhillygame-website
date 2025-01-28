@@ -24,6 +24,39 @@
     } else {
       console.log("Service Workers are not supported in this browser.");
     }
+  let deferredPrompt;
+
+  // Listen for the `beforeinstallprompt` event
+  window.addEventListener("beforeinstallprompt", (event) => {
+    event.preventDefault();
+    deferredPrompt = event; // Save the event for later
+    console.log("Install prompt triggered");
+
+    // Optionally, show a custom install button
+    const installButton = document.getElementById("install-button");
+    if (installButton) {
+      installButton.style.display = "block"; // Show the button
+      installButton.addEventListener("click", () => {
+        deferredPrompt.prompt(); // Show the native install prompt
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === "accepted") {
+            console.log("User accepted the install prompt");
+          } else {
+            console.log("User dismissed the install prompt");
+          }
+          deferredPrompt = null; // Reset the prompt
+        });
+      });
+    }
+  });
+
+  // Hide the button if the app is already installed
+  window.addEventListener("appinstalled", () => {
+    console.log("PWA was installed");
+    const installButton = document.getElementById("install-button");
+    if (installButton) installButton.style.display = "none";
+  });
+
   </script>
   
   <body>
