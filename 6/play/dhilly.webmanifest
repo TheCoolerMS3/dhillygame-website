@@ -3,13 +3,23 @@
     "short_name": "Dhilly 6",
     "description": "Dhilly Game 6 remade from the ground up - Homebrew Game Boy Color project",
     "icons": [
-      {
-        "src": "icons/icon-512.png",
-        "sizes": "512x512",
-        "type": "image/png",
-        "purpose": "maskable"
-      }
-    ],
+  {
+    "src": "icons/icon-144.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  },
+  {
+    "src": "icons/icon-192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  },
+  {
+    "src": "icons/icon-512.png",
+    "sizes": "512x512",
+    "type": "image/png",
+    "purpose": "maskable"
+  }
+],
     "start_url": "/6/play/index.html",
     "scope": "/6/play/",
     "display": "browser",
