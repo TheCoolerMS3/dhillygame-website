@@ -10,7 +10,7 @@
     <div class="gameboy">
         <img class="gameboyImg" width="400px" src="media/gameboycolor.png" alt="Dhilly Game 6 2.0 running on a Game Boy Color video game system.">
     </div>
-    <br><img class="centerAdaptiveImg" width="80" src="media/downarrow.png" alt="Down Arrow"><br>
+    <br><img class="centerAdaptiveImg" width="80" style="cursor: pointer;" onclick="scrolldownbutton()" src="media/downarrow.png" alt="Down Arrow"><br>
     <div class="contents">
         <img class="centerAdaptiveImg" src="media/dhillygame6.png" alt="Dhilly Game 6">
         <br><img src="media/gamescreenshot1.png" width="300px" class="floatright"><p1>Behold- The GREATEST Dhilly Game adventure yet!</p1>
@@ -34,3 +34,8 @@
         <p align=center><a href="play">Play online</a> <a href="rom.gbc">Download ROM</a></p>
     </div>
 </body>
+<script>
+    function scrolldownbutton() {
+        window.scrollBy({ top: 1000, behavior: "smooth" });
+    }
+</script>
